@@ -100,9 +100,8 @@ const Landing = () => {
           <div className="mb-16 relative">
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-px h-full bg-foreground opacity-20" />
 
-            <h2 className="text-4xl font-bold text-foreground mb-8 relative">
-              How Traffic<span style={{ color: "#ef4444" }}>❤️</span>S Works
-              <div className="absolute -bottom-2 left-0 w-20 h-1 bg-foreground" />
+            <h2 className="text-4xl font-bold text-foreground mb-8">
+              How TrafficOS Works
             </h2>
 
             <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
