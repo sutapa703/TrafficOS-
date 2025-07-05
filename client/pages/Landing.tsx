@@ -29,16 +29,6 @@ const Landing = () => {
             <h1 className="text-6xl md:text-8xl font-bold text-foreground mb-8">
               TrafficOS
             </h1>
-            <div className="flex justify-center mb-8">
-              <div
-                className={`text-2xl transition-transform duration-300 ${
-                  heartBeat ? "scale-125" : "scale-100"
-                }`}
-                style={{ color: "#ef4444" }}
-              >
-                ❤️
-              </div>
-            </div>
             <div className="relative">
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
                 The next-generation AI-powered traffic management system that
