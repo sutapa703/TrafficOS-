@@ -32,7 +32,7 @@ const SignUp = () => {
     },
     {
       type: "business",
-      title: "Business/HR",
+      title: "Business",
       description: "Optimize employee commutes and logistics",
       icon: "🏢",
       route: "/business-dashboard",
