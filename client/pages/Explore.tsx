@@ -43,6 +43,13 @@ const Explore = () => {
               Interactive demo and case studies will be available here.
             </p>
           </div>
+
+          {/* Copyright */}
+          <div className="text-center border-t border-border pt-8 mt-12">
+            <p className="text-xs text-muted-foreground">
+              ©TrafficOS 2025. All rights reserved.
+            </p>
+          </div>
         </div>
       </div>
     </div>

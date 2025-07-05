@@ -182,6 +182,13 @@ const GovernmentDashboard = () => {
             </div>
           </button>
         </div>
+
+        {/* Copyright */}
+        <div className="text-center border-t border-border pt-4 mt-6">
+          <p className="text-xs text-muted-foreground">
+            ©TrafficOS 2025. All rights reserved.
+          </p>
+        </div>
       </div>
 
       <BottomNavigation userType="government" />
