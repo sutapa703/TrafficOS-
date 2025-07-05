@@ -39,6 +39,27 @@ const BottomNavigation = ({ userType = "citizen" }: BottomNavigationProps) => {
           { path: `${basePath}/analytics`, label: "Analytics", icon: "📈" },
           { path: `${basePath}/settings`, label: "Settings", icon: "⚙️" },
         ];
+      case "transport":
+        return [
+          { path: `${basePath}`, label: "Home", icon: "🏠" },
+          { path: `${basePath}/routes`, label: "Routes", icon: "🚌" },
+          { path: `${basePath}/alerts`, label: "Alerts", icon: "🔔" },
+          { path: `${basePath}/settings`, label: "Settings", icon: "⚙️" },
+        ];
+      case "business":
+        return [
+          { path: `${basePath}`, label: "Home", icon: "🏠" },
+          { path: `${basePath}/fleet`, label: "Fleet", icon: "🚌" },
+          { path: `${basePath}/reports`, label: "Reports", icon: "📊" },
+          { path: `${basePath}/settings`, label: "Settings", icon: "⚙️" },
+        ];
+      case "police":
+        return [
+          { path: `${basePath}`, label: "Control", icon: "🏠" },
+          { path: `${basePath}/incidents`, label: "Incidents", icon: "🚨" },
+          { path: `${basePath}/patrol`, label: "Patrol", icon: "🚔" },
+          { path: `${basePath}/reports`, label: "Reports", icon: "📋" },
+        ];
       default:
         return [
           { path: `${basePath}`, label: "Home", icon: "🏠" },
