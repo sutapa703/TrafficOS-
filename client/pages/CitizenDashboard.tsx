@@ -44,6 +44,54 @@ const CitizenDashboard = () => {
     { from: "Mall", to: "Home", time: "8:45 PM", duration: "22 min" },
   ];
 
+  const communityReports = [
+    {
+      user: "Rajesh K.",
+      report: "Heavy traffic jam on Outer Ring Road near Marathahalli",
+      time: "3 min ago",
+      type: "Traffic",
+      verified: true,
+    },
+    {
+      user: "Priya M.",
+      report: "Minor accident at Silk Board junction, lane blocked",
+      time: "8 min ago",
+      type: "Accident",
+      verified: false,
+    },
+    {
+      user: "Suresh R.",
+      report: "Road construction started on Hosur Road",
+      time: "15 min ago",
+      type: "Construction",
+      verified: true,
+    },
+  ];
+
+  const comboSuggestions = [
+    {
+      destination: "Electronic City",
+      combo: "Auto + Metro",
+      time: "45 min",
+      cost: "₹85",
+      savings: "Save 15 min",
+    },
+    {
+      destination: "Whitefield",
+      combo: "Bus + Metro",
+      time: "52 min",
+      cost: "₹35",
+      savings: "Save ₹40",
+    },
+    {
+      destination: "Airport",
+      combo: "Metro + Bus",
+      time: "65 min",
+      cost: "₹95",
+      savings: "Save 25 min",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-background pb-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
@@ -114,6 +162,22 @@ const CitizenDashboard = () => {
           </div>
         </div>
 
+        {/* CO2 Alert */}
+        <div className="mb-6 p-3 border border-orange-200 bg-orange-50">
+          <div className="flex items-start space-x-2">
+            <span className="text-sm">🫁</span>
+            <div>
+              <p className="text-sm font-medium text-orange-800">
+                High CO2 Alert: Avoid MG Road route
+              </p>
+              <p className="text-xs text-orange-600">
+                Air quality poor due to heavy traffic. Consider alternate routes
+                for respiratory health.
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Live Updates */}
         <div className="mb-6">
           <h2 className="text-lg font-semibold text-foreground mb-3">
@@ -149,6 +213,76 @@ const CitizenDashboard = () => {
           </div>
         </div>
 
+        {/* Community Reports */}
+        <div className="mb-6">
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="text-lg font-semibold text-foreground">
+              Community Reports
+            </h2>
+            <button className="text-xs bg-black text-white px-3 py-1">
+              + Report
+            </button>
+          </div>
+          <div className="space-y-2">
+            {communityReports.map((report, index) => (
+              <div key={index} className="p-3 border border-border bg-card">
+                <div className="flex items-start justify-between mb-1">
+                  <div className="flex items-center space-x-2">
+                    <span className="text-xs font-medium">{report.user}</span>
+                    <span
+                      className={`px-2 py-1 text-xs ${
+                        report.type === "Traffic"
+                          ? "bg-red-100 text-red-800"
+                          : report.type === "Accident"
+                            ? "bg-orange-100 text-orange-800"
+                            : "bg-blue-100 text-blue-800"
+                      }`}
+                    >
+                      {report.type}
+                    </span>
+                    {report.verified && (
+                      <span className="text-xs text-green-600">✓ Verified</span>
+                    )}
+                  </div>
+                  <span className="text-xs text-muted-foreground">
+                    {report.time}
+                  </span>
+                </div>
+                <p className="text-sm text-foreground">{report.report}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Combo Ride Suggestions */}
+        <div className="mb-6">
+          <h2 className="text-lg font-semibold text-foreground mb-3">
+            Smart Combo Rides
+          </h2>
+          <div className="space-y-2">
+            {comboSuggestions.map((combo, index) => (
+              <div key={index} className="p-3 border border-border bg-card">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-sm font-medium text-foreground">
+                      To {combo.destination}
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      {combo.combo} • {combo.time} • {combo.cost}
+                    </p>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-xs text-green-600">{combo.savings}</p>
+                    <button className="text-xs bg-secondary px-2 py-1 mt-1">
+                      Book
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Recent Trips */}
         <div className="mb-6">
           <h2 className="text-lg font-semibold text-foreground mb-3">
@@ -171,6 +305,13 @@ const CitizenDashboard = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="text-center border-t border-border pt-4 mt-6">
+          <p className="text-xs text-muted-foreground">
+            ©TrafficOS 2025. All rights reserved.
+          </p>
         </div>
       </div>
 
