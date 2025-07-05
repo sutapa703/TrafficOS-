@@ -9,7 +9,7 @@ const BottomNavigation = ({ userType = "citizen" }: BottomNavigationProps) => {
 
   const getNavItems = (type: string) => {
     const basePath = `/${type}-dashboard`;
-    
+
     switch (type) {
       case "citizen":
         return [
@@ -43,7 +43,7 @@ const BottomNavigation = ({ userType = "citizen" }: BottomNavigationProps) => {
         return [
           { path: `${basePath}`, label: "Home", icon: "🏠" },
           { path: `${basePath}/monitor`, label: "Monitor", icon: "📊" },
-          { path: `${basePath}/alerts", label: "Alerts", icon: "🔔" },
+          { path: `${basePath}/alerts`, label: "Alerts", icon: "🔔" },
           { path: `${basePath}/settings`, label: "Settings", icon: "⚙️" },
         ];
     }
