@@ -24,23 +24,20 @@ const Landing = () => {
 
       <div className="relative z-10 min-h-screen flex items-center justify-center">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          {/* Main Headline with Heart */}
+          {/* Main Headline */}
           <div className="mb-16">
-            <div className="flex items-center justify-center mb-8">
-              <h1 className="text-6xl md:text-8xl font-bold text-foreground mr-4">
-                Traffic
-              </h1>
+            <h1 className="text-6xl md:text-8xl font-bold text-foreground mb-8">
+              TrafficOS
+            </h1>
+            <div className="flex justify-center mb-8">
               <div
-                className={`text-6xl md:text-8xl transition-transform duration-300 ${
+                className={`text-2xl transition-transform duration-300 ${
                   heartBeat ? "scale-125" : "scale-100"
                 }`}
                 style={{ color: "#ef4444" }}
               >
                 ❤️
               </div>
-              <h1 className="text-6xl md:text-8xl font-bold text-foreground ml-4">
-                S
-              </h1>
             </div>
             <div className="relative">
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
