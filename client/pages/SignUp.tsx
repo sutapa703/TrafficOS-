@@ -70,7 +70,7 @@ const SignUp = () => {
         </div>
       </div>
 
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12 pb-20">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-foreground mb-4">
             Choose Your Access Level
@@ -108,7 +108,7 @@ const SignUp = () => {
         </div>
 
         {/* Government Access */}
-        <div className="border-t border-border pt-12">
+        <div className="border-t border-border pt-12 mb-12">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-foreground mb-2">
               Government Access
@@ -140,12 +140,19 @@ const SignUp = () => {
         </div>
 
         {/* Already Have Account */}
-        <div className="text-center mt-12">
+        <div className="text-center mb-8">
           <p className="text-muted-foreground">
             Already have an account?{" "}
             <Link to="/login" className="text-foreground underline">
               Sign In
             </Link>
+          </p>
+        </div>
+
+        {/* Copyright */}
+        <div className="text-center border-t border-border pt-8">
+          <p className="text-xs text-muted-foreground">
+            ©TrafficOS 2025. All rights reserved.
           </p>
         </div>
       </div>

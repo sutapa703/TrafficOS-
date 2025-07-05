@@ -94,7 +94,7 @@ const Landing = () => {
         </div>
 
         {/* Stats */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
             <div className="text-2xl font-bold text-foreground">3.2M+</div>
             <div className="text-sm text-muted-foreground">Citizens Served</div>
@@ -113,6 +113,13 @@ const Landing = () => {
             <div className="text-2xl font-bold text-foreground">50+</div>
             <div className="text-sm text-muted-foreground">Cities Deployed</div>
           </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="text-center border-t border-border pt-8">
+          <p className="text-xs text-muted-foreground">
+            ©TrafficOS 2025. All rights reserved.
+          </p>
         </div>
       </div>
     </div>
